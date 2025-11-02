@@ -25,5 +25,11 @@ def pipeline():
         print("terceira atividade rodou com sucesso")
         sleep(2)
 
+    t1 = primeira_atividade()
+    t2 = segunda_atividade()
+    t3 = terceira_atividade()
+
+    t1 >> t2 >> t3
+
 if __name__ == "__main__":
     pipeline()
